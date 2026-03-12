@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>the workshop</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --bg:        #1a1612;
+  --bg2:       #221e19;
+  --card:      #2a2420;
+  --card2:     #322c26;
+  --border:    #3d3630;
+  --border2:   #4a433b;
+  --amber:     #c8a96e;
+  --amber-dim: #9a7e4f;
+  --amber-bg:  rgba(200,169,110,0.08);
+  --cream:     #e8dcc8;
+  --muted:     #8a7e6e;
+  --faint:     #5a5040;
+  --green:     #70a880;
+}
+
+* { box-sizing: border-box; margin:0; padding:0; }
+
+body{
+  background:var(--bg);
+  color:var(--cream);
+  font-family:'DM Mono', monospace;
+  min-height:100vh;
+  padding:24px 16px 60px;
+  max-width:900px;
+  margin:0 auto;
+}
+
+/* HEADER */
+
+.header{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--border);
+  margin-bottom:24px;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.wordmark{
+  font-family:'Playfair Display', serif;
+  font-size:26px;
+  font-weight:400;
+  letter-spacing:-0.02em;
+}
+
+.wordmark em{
+  font-style:italic;
+  color:var(--amber);
+}
+
+.site-status{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:10px;
+  letter-spacing:0.08em;
+  color:var(--muted);
+  text-transform:uppercase;
+}
+
+.status-dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--green);
+}
+
+/* INTRO */
+
+.intro{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:14px 16px;
+  margin-bottom:18px;
+}
+
+.intro-label{
+  font-size:10px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+
+.intro-copy{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* SECTION */
+
+.section{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:20px;
+}
+
+.section-label{
+  font-size:10px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+
+/* GRID */
+
+.tools-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:14px;
+}
+
+/* CARD */
+
+.tool-card{
+  background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  min-height:210px;
+  transition:all .2s;
+}
+
+.tool-card:hover{
+  border-color:var(--border2);
+  transform:translateY(-2px);
+}
+
+.tool-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:10px;
+}
+
+.tool-kicker{
+  font-size:9px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--amber);
+  border:1px solid var(--amber-dim);
+  background:var(--amber-bg);
+  padding:3px 6px;
+  border-radius:3px;
+}
+
+.tool-status{
+  font-size:9px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+  border:1px solid var(--border2);
+  padding:3px 6px;
+  border-radius:3px;
+}
+
+.tool-title{
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  margin-bottom:4px;
+}
+
+.tool-sub{
+  font-size:10px;
+  color:var(--muted);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.tool-desc{
+  font-size:11px;
+  color:var(--muted);
+  line-height:1.6;
+  margin-bottom:14px;
+  flex:1;
+}
+
+/* TAGS */
+
+.tool-tags{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+.tool-tag{
+  font-size:8px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:2px 6px;
+  border-radius:2px;
+  border:1px solid var(--border2);
+  color:var(--faint);
+}
+
+.tool-tag.amber{
+  border-color:var(--amber-dim);
+  color:var(--amber-dim);
+}
+
+/* BUTTONS */
+
+.tool-actions{
+  display:grid;
+  grid-template-columns:1fr;
+}
+
+.btn{
+  text-decoration:none;
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  border-radius:6px;
+  padding:12px;
+  text-align:center;
+  transition:.2s;
+}
+
+.btn-primary{
+  background:var(--amber);
+  color:#1a1612;
+}
+
+.btn-primary:hover{
+  background:#d4b87e;
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="wordmark">the <em>workshop</em></div>
+  <div class="site-status">
+    <div class="status-dot"></div>
+    personal tools
+  </div>
+</header>
+
+<div class="intro">
+  <div class="intro-label">about</div>
+  <div class="intro-copy">
+    A small collection of tools and experiments built for daily life.
+  </div>
+</div>
+
+<div class="section">
+<div class="section-label">active tools</div>
+
+<div class="tools-grid">
+
+<article class="tool-card">
+  <div class="tool-top">
+    <div class="tool-kicker">local</div>
+    <div class="tool-status">active</div>
+  </div>
+  <div class="tool-title">The Commons</div>
+  <div class="tool-sub">Portland map</div>
+  <div class="tool-desc">
+    A map-first tool for saving restaurants, breweries, bars, and places worth trying.
+  </div>
+  <div class="tool-tags">
+    <span class="tool-tag amber">restaurants</span>
+    <span class="tool-tag">breweries</span>
+    <span class="tool-tag">bars</span>
+  </div>
+  <div class="tool-actions">
+    <a class="btn btn-primary" href="https://www.stoult.com/commons/">open tool</a>
+  </div>
+</article>
+
+<article class="tool-card">
+  <div class="tool-top">
+    <div class="tool-kicker">family</div>
+    <div class="tool-status">active</div>
+  </div>
+  <div class="tool-title">Parenting Log</div>
+  <div class="tool-sub">Daily records</div>
+  <div class="tool-desc">
+    Track parenting time, handoffs, routines, and daily notes.
+  </div>
+  <div class="tool-tags">
+    <span class="tool-tag amber">coparenting</span>
+    <span class="tool-tag">daily log</span>
+  </div>
+  <div class="tool-actions">
+    <a class="btn btn-primary" href="https://www.stoult.com/coparent/">open tool</a>
+  </div>
+</article>
+
+<article class="tool-card">
+  <div class="tool-top">
+    <div class="tool-kicker">collection</div>
+    <div class="tool-status">active</div>
+  </div>
+  <div class="tool-title">The Ledger</div>
+  <div class="tool-sub">Library catalog</div>
+  <div class="tool-desc">
+    Catalog and browse vinyl records and books stored in your vault.
+  </div>
+  <div class="tool-tags">
+    <span class="tool-tag amber">vinyl</span>
+    <span class="tool-tag">books</span>
+    <span class="tool-tag">collection</span>
+  </div>
+  <div class="tool-actions">
+    <a class="btn btn-primary" href="https://www.stoult.com/ledger/">open tool</a>
+  </div>
+</article>
+
+</div>
+</div>
+
+</body>
+</html>

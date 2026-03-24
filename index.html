@@ -32,6 +32,7 @@
   --green:     #70a880;
   --red:       #c87060;
   --blue:      #6090b0;
+  --radius:    6px;
 }
 
 * { box-sizing: border-box; margin:0; padding:0; }
@@ -88,7 +89,7 @@ body{
 .intro{
   background:var(--card);
   border:1px solid var(--border);
-  border-radius:8px;
+  border-radius:var(--radius);
   padding:14px 16px;
   margin-bottom:18px;
 }
@@ -112,7 +113,7 @@ body{
 .section{
   background:var(--card);
   border:1px solid var(--border);
-  border-radius:8px;
+  border-radius:var(--radius);
   padding:20px;
 }
 
@@ -129,7 +130,7 @@ body{
 .tools-grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-  gap:14px;
+  gap:20px;
 }
 
 /* CARD */
@@ -137,7 +138,7 @@ body{
 .tool-card{
   background:var(--bg2);
   border:1px solid var(--border);
-  border-radius:8px;
+  border-radius:var(--radius);
   padding:16px;
   display:flex;
   flex-direction:column;
@@ -294,10 +295,6 @@ body{
 
 <header class="header">
   <div class="wordmark">the <em>workshop</em></div>
-  <div class="site-status">
-    <div class="status-dot"></div>
-    personal tools
-  </div>
 </header>
 
 <svg class="seam" viewBox="0 0 900 20" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -319,7 +316,6 @@ body{
 <article class="tool-card">
   <div class="tool-top">
     <div class="tool-kicker">local</div>
-    <div class="tool-status">active</div>
   </div>
   <div class="tool-title">the <em>Commons</em></div>
   <div class="tool-sub">Portland map</div>
@@ -339,7 +335,6 @@ body{
 <article class="tool-card">
   <div class="tool-top">
     <div class="tool-kicker">family</div>
-    <div class="tool-status">active</div>
   </div>
   <div class="tool-title">the <em>Parenting Log</em></div>
   <div class="tool-sub">Daily records</div>
@@ -358,7 +353,6 @@ body{
 <article class="tool-card">
   <div class="tool-top">
     <div class="tool-kicker">home</div>
-    <div class="tool-status">active</div>
   </div>
   <div class="tool-title">the <em>Keep</em></div>
   <div class="tool-sub">Household rhythms</div>
@@ -379,7 +373,6 @@ body{
 <article class="tool-card">
   <div class="tool-top">
     <div class="tool-kicker">collection</div>
-    <div class="tool-status">active</div>
   </div>
   <div class="tool-title">the <em>Ledger</em></div>
   <div class="tool-sub">Library catalog</div>

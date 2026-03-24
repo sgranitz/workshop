@@ -151,33 +151,6 @@ body{
   transform:translateY(-2px);
 }
 
-.tool-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  margin-bottom:10px;
-}
-
-.tool-kicker{
-  font-size:9px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  color:var(--amber);
-  border:1px solid var(--amber-dim);
-  background:var(--amber-bg);
-  padding:3px 6px;
-  border-radius:3px;
-}
-
-.tool-status{
-  font-size:9px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  color:var(--muted);
-  border:1px solid var(--border2);
-  padding:3px 6px;
-  border-radius:3px;
-}
 
 .tool-title{
   font-family:'Crimson Text', serif;
@@ -314,9 +287,6 @@ body{
 <div class="tools-grid">
 
 <article class="tool-card">
-  <div class="tool-top">
-    <div class="tool-kicker">local</div>
-  </div>
   <div class="tool-title">the <em>Commons</em></div>
   <div class="tool-sub">Portland map</div>
   <div class="tool-desc">
@@ -333,16 +303,14 @@ body{
 </article>
 
 <article class="tool-card">
-  <div class="tool-top">
-    <div class="tool-kicker">family</div>
-  </div>
   <div class="tool-title">the <em>Parenting Log</em></div>
   <div class="tool-sub">Daily records</div>
   <div class="tool-desc">
     Track parenting time, handoffs, routines, and daily notes.
   </div>
   <div class="tool-tags">
-    <span class="tool-tag amber">coparenting</span>
+    <span class="tool-tag amber">family</span>
+    <span class="tool-tag">coparenting</span>
     <span class="tool-tag">daily log</span>
   </div>
   <div class="tool-actions">
@@ -351,9 +319,6 @@ body{
 </article>
 
 <article class="tool-card">
-  <div class="tool-top">
-    <div class="tool-kicker">home</div>
-  </div>
   <div class="tool-title">the <em>Keep</em></div>
   <div class="tool-sub">Household rhythms</div>
   <div class="tool-desc">
@@ -361,7 +326,7 @@ body{
     pantry stock, and shopping lists organized by room.
   </div>
   <div class="tool-tags">
-    <span class="tool-tag amber">household</span>
+    <span class="tool-tag amber">home</span>
     <span class="tool-tag">routines</span>
     <span class="tool-tag">inventory</span>
   </div>
@@ -371,18 +336,15 @@ body{
 </article>
 
 <article class="tool-card">
-  <div class="tool-top">
-    <div class="tool-kicker">collection</div>
-  </div>
   <div class="tool-title">the <em>Ledger</em></div>
   <div class="tool-sub">Library catalog</div>
   <div class="tool-desc">
     Catalog and browse vinyl records and books stored in your vault.
   </div>
   <div class="tool-tags">
-    <span class="tool-tag amber">vinyl</span>
+    <span class="tool-tag amber">collection</span>
+    <span class="tool-tag">vinyl</span>
     <span class="tool-tag">books</span>
-    <span class="tool-tag">collection</span>
   </div>
   <div class="tool-actions">
     <a class="btn btn-primary" href="https://www.stoult.com/ledger/">open tool</a>
